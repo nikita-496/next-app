@@ -1,0 +1,45 @@
+@tailwind utilities;
+
+@layer utilities {
+	.typography-h2 {
+		font-size: calc(
+			var(--typography-1440-h2-bold-font-size) / var(--base-font-size)
+		);
+		letter-spacing: var(--typography-1440-h2-bold-letter-spacing);
+		line-height: 1.3;
+	}
+
+	.typography-h3 {
+		font-size: calc(var(--typography-320-h3-font-size) / var(--base-font-size));
+		font-weight: var(--typography-320-h3-font-weight);
+		letter-spacing: var(--typography-320-h3-letter-spacing);
+		line-height: 1.2;
+		@media (min-width: 768px) {
+			font-size: calc(
+				var(--typography-768-h3-font-size) / var(--base-font-size)
+			);
+			line-height: 1.2;
+			letter-spacing: var(--typography-768-h3-letter-spacing);
+		}
+	}
+}
+
+.tabs {
+	@apply bg-white rounded-2lg;
+}
+
+.tab {
+	@apply text-xs md:typography-h3 screen_1440:typography-h2 w-1/2 py-2.5 text-gray_01 rounded-2lg;
+}
+
+.tab-active {
+	@apply bg-black text-white;
+}
+
+.content {
+	@apply hidden min-h-[92px];
+}
+
+.content-active {
+	@apply block mt-8;
+}
