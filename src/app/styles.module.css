@@ -1,0 +1,26 @@
+.section-hero {
+	@apply bg-[url('../public/blue-glass-shapes-composition.png')] bg-cover bg-center;
+}
+
+.section-gray {
+	@apply bg-gray_03;
+}
+
+.content {
+	margin-left: 16px;
+	@media (min-width: 500px) {
+		margin-left: max(30px, calc((100% - 490px) / 2));
+	}
+	@media (min-width: 640px) {
+		margin-left: max(30px, calc((100% - 600px) / 2));
+	}
+	@media (min-width: 768px) {
+		margin-left: max(30px, calc((100% - 910px) / 2));
+	}
+	@media (min-width: 1280px) {
+		margin-left: max(30px, calc((100% - 1160px) / 2));
+	}
+	@media (min-width: 1536px) {
+		margin-left: max(30px, calc((100% - 1160px) / 2));
+	}
+}
