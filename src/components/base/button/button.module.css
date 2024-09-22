@@ -1,0 +1,45 @@
+@tailwind utilities;
+@layer utilities {
+	.typography-btn {
+		font-size: calc(
+			var(--typography-320-btn-font-size) / var(--base-font-size)
+		);
+		font-weight: var(--typography-320-btn-font-weight);
+		letter-spacing: var(--typography-320-btn-letter-spacing) /
+			var(--base-font-size);
+		line-height: 1.7;
+		@media (min-width: 1440px) {
+			font-size: calc(
+				var(--typography-1440-btn-font-size) / var(--base-font-size)
+			);
+			letter-spacing: var(--typography-1440-btn-letter-spacing) /
+				var(--base-font-size);
+		}
+	}
+}
+
+.btn {
+	@apply typography-btn rounded-2lg text-white px-11.5 py-3;
+}
+
+.btn-orange {
+	@apply bg-orange;
+}
+
+.btn-black {
+	@apply bg-black;
+}
+
+.btn-orange:hover {
+	@apply bg-dark_orange;
+}
+
+.btn-disabled {
+	@apply cursor-not-allowed;
+}
+.btn-orange-disabled {
+	@apply bg-gray_02 text-gray_01;
+}
+.btn-black-disabled {
+	@apply bg-gray_01 text-white;
+}

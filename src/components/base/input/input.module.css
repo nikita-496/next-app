@@ -1,0 +1,15 @@
+.input {
+	@apply bg-inherit focus:outline-none border-b border-gray_01 pt-2.5 pb-4.5;
+}
+
+.input::placeholder {
+	@apply text-black;
+}
+
+.input:hover {
+	@apply border-black;
+}
+
+.input-invalid {
+	@apply border-error;
+}

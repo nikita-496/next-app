@@ -1,0 +1,11 @@
+.textarea {
+	@apply bg-inherit focus:outline-none resize-none border border-gray_01 rounded-xl pt-3.5 px-4.5 pb-28;
+}
+
+.textarea:hover {
+	@apply border-black;
+}
+
+.textarea::placeholder {
+	@apply text-black;
+}
