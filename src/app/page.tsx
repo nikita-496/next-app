@@ -14,6 +14,7 @@ import {
 	VectorImage,
 	ZyphronixImage,
 } from "@/components/Image";
+import { ids } from "@/constants/ids";
 
 export default function Page() {
 	return (
@@ -51,7 +52,10 @@ export default function Page() {
 				</div>
 			</section>
 
-			<section className="pt-10 pb-5 sm:pt-20 sm:pb-20 screen_1440:pt-[100px] screen_1440:pb-[90px]">
+			<section
+				id={ids[0]}
+				className="pt-10 pb-5 sm:pt-20 sm:pb-20 screen_1440:pt-[100px] screen_1440:pb-[90px]"
+			>
 				<div className="container">
 					<h2 className="typography-h2 md:px-[88px] screen_1440:typography-h1-bold screen_1440:px-[62px] md:text-center">
 						Баланс между выручкой и удовлетворённостью пользователей
@@ -97,7 +101,10 @@ export default function Page() {
 					</ul>
 				</div>
 			</section>
-			<section className="pt-6 pb-[50px] sm:pt-[60px] sm:pb-20 screen_1440:pt-[90px] screen_1440:pb-14">
+			<section
+				id={ids[1]}
+				className="pt-6 pb-[50px] sm:pt-[60px] sm:pb-20 screen_1440:pt-[90px] screen_1440:pb-14"
+			>
 				<div className="flex flex-col justify-between py-10 md:flex-row">
 					<div
 						className={clsx(
