@@ -160,7 +160,7 @@ export default function Page() {
 							Заказать звонок
 						</Button>
 					</div>
-					<ComputerImage className="mt-[50px] w-[300px] overflow-hidden ml-auto md:flex md:justify-end md:mt-0 md:max-w-[700px] md:block screen_960:translate-y-[-30px] flex-1" />
+					<ComputerImage className="mt-[50px] w-[300px] overflow-hidden ml-auto md:flex md:justify-end md:mt-0 md:block screen_960:translate-y-[-30px] flex-1" />
 				</div>
 			</section>
 			<footer

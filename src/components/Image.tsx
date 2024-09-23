@@ -182,7 +182,7 @@ export function ComputerImage({ className }: ImageProps) {
 			<Image
 				src={Computer721w}
 				alt="Ноутбук с изображением главной страницы"
-				className="max-w-none w-[501px] md:max-w-full md:w-[399px] screen_960:w-[500px] screen_1440:w-[721px]"
+				className="max-w-none w-[501px] md:max-w-full md:w-auto"
 			/>
 		</picture>
 	);
