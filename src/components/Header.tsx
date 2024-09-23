@@ -10,7 +10,7 @@ export function Header({ className }: HeaderProps) {
 	const classMerged = clsx("flex justify-center bg-gray_03", className);
 	return (
 		<header className={classMerged}>
-			<div className="container flex justify-between">
+			<div className="container flex items-center justify-between">
 				<Logo name="LOGO" className="z-20" />
 				<Nav className="hidden lg:block" />
 				<Burger />

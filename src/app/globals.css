@@ -153,6 +153,22 @@
 			line-height: 1.4;
 		}
 	}
+	.typography-btn {
+		font-size: calc(
+			var(--typography-320-btn-font-size) / var(--base-font-size)
+		);
+		font-weight: var(--typography-320-btn-font-weight);
+		letter-spacing: var(--typography-320-btn-letter-spacing) /
+			var(--base-font-size);
+		line-height: 1.7;
+		@media (min-width: 1440px) {
+			font-size: calc(
+				var(--typography-1440-btn-font-size) / var(--base-font-size)
+			);
+			letter-spacing: var(--typography-1440-btn-letter-spacing) /
+				var(--base-font-size);
+		}
+	}
 }
 
 @layer utilities {

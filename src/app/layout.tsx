@@ -22,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={`${onest.variable}`}>
 			<body className="typography-body-text-1 bg-gray_04 font-sans">
-				<Header className="w-full py-5 md:pt-8 fixed left-1/2 transform -translate-x-1/2 z-10" />
+				<Header className="w-full py-[14px]  fixed left-1/2 transform -translate-x-1/2 z-10" />
 				{children}
 			</body>
 		</html>
