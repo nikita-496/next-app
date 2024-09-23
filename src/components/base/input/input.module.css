@@ -1,5 +1,5 @@
 .input {
-	@apply bg-inherit focus:outline-none border-b border-gray_01 pt-2.5 pb-4.5;
+	@apply bg-inherit focus:outline-none border-b border-gray_01 pt-[6px] pb-[14px] md:pb-4 md:pb-[10px];
 }
 
 .input::placeholder {
@@ -12,4 +12,8 @@
 
 .input-invalid {
 	@apply border-error;
+}
+
+.error {
+	@apply text-error font-medium text-[10px] mt-[5px];
 }

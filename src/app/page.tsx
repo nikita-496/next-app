@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/base/button/Button";
 import { Input } from "@/components/base/input/Input";
 import { Tabs } from "@/components/tabs/Tabs";
@@ -15,8 +17,15 @@ import {
 	ZyphronixImage,
 } from "@/components/Image";
 import { ids } from "@/constants/ids";
+import React from "react";
+import { useForm } from "@/hooks/useForm";
 
 export default function Page() {
+	const {
+		handleSubmit,
+		register,
+		formState: { error },
+	} = useForm();
 	return (
 		<main>
 			<section
@@ -145,7 +154,7 @@ export default function Page() {
 					<ComputerImage className="mt-[50px] w-[300px] overflow-hidden ml-auto md:flex md:justify-end md:mt-0 md:max-w-[700px] md:block screen_960:translate-y-[-30px] flex-1" />
 				</div>
 			</section>
-			<section
+			<footer
 				className={clsx(
 					"pt-20 pb-7 sm:pt-10 sm:pb-[50px] screen_1440:pt-[100px] screen_1440:pb-10",
 					styles["section-gray"]
@@ -155,10 +164,24 @@ export default function Page() {
 					<h2 className="typography-h2 screen_1440:typography-h1-bold">
 						Заполните форму
 					</h2>
-					<form className="flex flex-col gap-10 mt-8  md:mt-16 screen_960:flex-row">
-						<Textarea className="flex-1" placeholder="Напишить свой вопрос" />
+					<form
+						className="flex flex-col gap-10 mt-8  md:mt-16 screen_960:flex-row"
+						onSubmit={handleSubmit}
+					>
+						<Textarea
+							className="flex-1"
+							placeholder="Напишить свой вопрос"
+							name="question"
+						/>
 						<div className="flex flex-col flex-1 gap-8 md:gap-0">
-							<Input placeholder="Введите e-mail" />
+							<Input
+								placeholder="Введите e-mail"
+								{...register("email", {
+									pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+									errorMessage: "Неправильно указана почта",
+								})}
+								error={error}
+							/>
 							<Checkbox
 								renderProps={
 									<div className="typography-body-text-2 md:typography-body-text-3 w-full md:w-[438px]">
@@ -180,7 +203,7 @@ export default function Page() {
 						</div>
 					</form>
 				</div>
-			</section>
+			</footer>
 		</main>
 	);
 }
