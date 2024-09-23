@@ -9,6 +9,8 @@ import { Bullet } from "@/components/Bullet";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 
+import backgroundHero from "../public/blue-glass-shapes-composition.png";
+
 import {
 	ClickwaveImage,
 	ComputerImage,
@@ -19,6 +21,7 @@ import {
 import { ids } from "@/constants/ids";
 import React from "react";
 import { useForm } from "@/hooks/useForm";
+import Image from "next/image";
 
 export default function Page() {
 	const {
@@ -30,8 +33,7 @@ export default function Page() {
 		<main>
 			<section
 				className={clsx(
-					"pt-24 pb-10 sm:pt-40 sm:pb-10 screen_1440:pb-20",
-					styles["section-hero"]
+					"pt-24 pb-10 sm:pt-40 sm:pb-10 screen_1440:pb-20 relative"
 				)}
 			>
 				<div className="flex flex-col md:block container">
@@ -59,6 +61,12 @@ export default function Page() {
 						/>
 					</div>
 				</div>
+				<Image
+					alt="Серебряные монеты с глянцем"
+					src={backgroundHero}
+					fill
+					className={styles["bg-hero"]}
+				/>
 			</section>
 
 			<section
