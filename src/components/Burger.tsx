@@ -17,12 +17,12 @@ export function Burger({}) {
 	);
 	return (
 		<>
-			<a
+			<div
 				onClick={handleClick}
 				className="relative z-20 flex justify-center items-center cursor-pointer px-[7px] py-[14px] border-2 border-orange rounded-[7.27px] md:rounded-2lg md:px-[10.4px] md:py-[19.4px] lg:hidden"
 			>
 				<span className={spanClassMerged}></span>
-			</a>
+			</div>
 
 			<aside className={asideClass}>
 				<Nav />

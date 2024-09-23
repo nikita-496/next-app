@@ -3,6 +3,7 @@
 import { ids } from "@/constants/ids";
 import { useScrollspy } from "@/hooks/useScrollspy";
 import clsx from "clsx";
+import Link from "next/link";
 
 type NavProps = {
 	className?: string;
@@ -15,7 +16,7 @@ export function Nav({ className }: NavProps) {
 			<ul className="flex flex-col lg:flex-row">
 				{ids.map((id, index) => (
 					<li key={id} className="px-8 py-[10px]">
-						<a
+						<Link
 							href={`#${id}`}
 							className={clsx(
 								"hover:text-orange typography-btn",
@@ -23,7 +24,7 @@ export function Nav({ className }: NavProps) {
 							)}
 						>
 							{index === 0 ? "Преимущества" : "Как работаем"}
-						</a>
+						</Link>
 					</li>
 				))}
 			</ul>
