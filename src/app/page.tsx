@@ -64,6 +64,7 @@ export default function Page() {
 				<Image
 					alt="Серебряные монеты с глянцем"
 					src={backgroundHero}
+					priority
 					fill
 					className={styles["bg-hero"]}
 				/>
